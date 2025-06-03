@@ -11,7 +11,7 @@ function Divider({ absolute }: { absolute?: boolean }) {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1200 120"
       preserveAspectRatio="none"
-      className={`${absolute ? "absolute" : ""} bottom-0 fill-inherit`}
+      className={`${absolute ? "absolute" : ""} bottom-0 fill-inherit stroke-2 stroke-inherit`}
     >
       <path d="M 0 0 L 0 120 1200 120 1200 100 z"></path>
     </svg>
