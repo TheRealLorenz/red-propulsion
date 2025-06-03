@@ -9,11 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "next": "15.3.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-markdown": "^10.1.0",
+    "remark-directive": "^4.0.0",
+    "remark-directive-rehype": "^0.4.2",
+    "remark-parse": "^11.0.0",
+    "remark-sectionize": "^2.1.0",
+    "unified": "^11.0.5",
+    "unist-util-remove": "^4.0.0"
   },
   "devDependencies": {
+    "@benjc/rehype-semantic-images": "^0.1.0",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
