@@ -1,3 +1,5 @@
-# Red propulsion
+# Red Propulsion
 
-Experimental rocketry team
+Student Rocketry Team
+
+_University of Florence_

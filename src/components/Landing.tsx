@@ -8,12 +8,16 @@ type WithChildren = {
 
 function LandingTitle({ children }: WithChildren) {
   return (
-    <h1 className="text-5xl md:text-8xl lg:text-9xl font-bold">{children}</h1>
+    <h1 className="text-5xl md:text-8xl lg:text-9xl font-bold block">
+      {children}
+    </h1>
   );
 }
 
 function Subtitle({ children }: WithChildren) {
-  return <p className="text-2xl md:text-4xl lg:text-6xl">{children}</p>;
+  return (
+    <p className="text-2xl md:text-4xl lg:text-6xl text-center">{children}</p>
+  );
 }
 
 export default function Landing() {
@@ -21,7 +25,7 @@ export default function Landing() {
 
   return (
     <WithDivider absolute className="fill-background-alt">
-      <div className="h-dvh flex flex-col items-center justify-center">
+      <div className="h-dvh flex flex-col items-center justify-center w-content">
         <ReactMarkdown
           components={{
             h1: LandingTitle,
