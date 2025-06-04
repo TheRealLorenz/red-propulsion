@@ -20,7 +20,7 @@ export default function Landing() {
   const component = Markdown.getComponent("landing.md");
 
   return (
-    <WithDivider absolute className="fill-red-400">
+    <WithDivider absolute className="fill-background-alt">
       <div className="h-dvh flex flex-col items-center justify-center">
         <ReactMarkdown
           components={{

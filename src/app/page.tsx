@@ -14,8 +14,8 @@ export function generateMetadata() {
 
 function Section({ children }: { children?: React.ReactNode }) {
   return (
-    <div className="group even:bg-red-400 border-background even:border-red-400 border-t">
-      <WithDivider className="fill-red-400 group-[:nth-child(even)]:fill-background group-[:nth-child(even)]:stroke-background group-[:last-child]:fill-none">
+    <div className="group even:bg-background-alt border-background even:border-background-alt border-t">
+      <WithDivider className="fill-background-alt group-[:nth-child(even)]:fill-background group-[:nth-child(even)]:stroke-background group-[:last-child]:fill-none">
         <Bounded>
           <section>{children}</section>
         </Bounded>
