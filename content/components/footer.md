@@ -6,5 +6,5 @@ Università di Firenze
 
 Email: [info@redpropulsion.it](mailto:info@redpropulsion.it)
 
-- [![](/github-logo-white.svg)](https://github.com/RedPropulsion)
-- [![](/instagram-logo-white.svg)](https://www.instagram.com/red_propulsion/)
+- [![](/github-logo-white.png)](https://github.com/RedPropulsion)
+- [![](/instagram-logo-white.png)](https://www.instagram.com/red_propulsion/)
