@@ -7,11 +7,13 @@ type WithChildren = {
 };
 
 function LandingTitle({ children }: WithChildren) {
-  return <h1 className="text-6xl md:text-8xl font-bold">{children}</h1>;
+  return (
+    <h1 className="text-5xl md:text-8xl lg:text-9xl font-bold">{children}</h1>
+  );
 }
 
 function Subtitle({ children }: WithChildren) {
-  return <p className="text-3xl md:text-4xl">{children}</p>;
+  return <p className="text-2xl md:text-4xl lg:text-6xl">{children}</p>;
 }
 
 export default function Landing() {
