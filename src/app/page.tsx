@@ -4,6 +4,7 @@ import Landing from "@/components/Landing";
 import sectionize from "remark-sectionize";
 import WithDivider from "@/components/WithDivider";
 import rehypeFigure from "@/lib/rehype-figure";
+import Bounded from "@/components/Bounded";
 
 export function generateMetadata() {
   const data = Markdown.getPage("index.md");
@@ -15,9 +16,11 @@ function Section({ children }: { children?: React.ReactNode }) {
   return (
     <div className="group even:bg-red-400 border-background even:border-red-400 border-t">
       <WithDivider className="fill-red-400 group-[:nth-child(even)]:fill-background group-[:nth-child(even)]:stroke-background group-[:last-child]:fill-none">
-        <section className="max-w-200 p-10 mx-auto text-xl md:text-2xl [&>h2]:text-4xl [&>h2]:md:text-5xl [&>h2]:mb-4 [&>h2]:font-bold">
-          {children}
-        </section>
+        <Bounded>
+          <section className="text-xl md:text-2xl [&>h2]:text-4xl [&>h2]:md:text-5xl [&>h2]:mb-4 [&>h2]:font-bold">
+            {children}
+          </section>
+        </Bounded>
       </WithDivider>
     </div>
   );
