@@ -1,8 +1,8 @@
-import getMarkdown from "@/markdown";
+import Markdown from "@/markdown";
 import ReactMarkdown from "react-markdown";
 
 export default function Footer() {
-  const data = getMarkdown("footer.md");
+  const component = Markdown.getComponent("footer.md");
 
   return (
     <div className="w-full bg-background-dark p-6 text-center md:text-left md:p-12">
@@ -18,7 +18,7 @@ export default function Footer() {
           ),
         }}
       >
-        {data.content}
+        {component}
       </ReactMarkdown>
     </div>
   );

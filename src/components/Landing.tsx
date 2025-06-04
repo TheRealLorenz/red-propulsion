@@ -1,4 +1,4 @@
-import getMarkdown from "@/markdown";
+import Markdown from "@/markdown";
 import ReactMarkdown from "react-markdown";
 import WithDivider from "./WithDivider";
 
@@ -15,7 +15,7 @@ function Subtitle({ children }: WithChildren) {
 }
 
 export default function Landing() {
-  const data = getMarkdown("landing.md");
+  const component = Markdown.getComponent("landing.md");
 
   return (
     <WithDivider absolute className="fill-red-400">
@@ -26,7 +26,7 @@ export default function Landing() {
             p: Subtitle,
           }}
         >
-          {data.content}
+          {component}
         </ReactMarkdown>
       </div>
     </WithDivider>

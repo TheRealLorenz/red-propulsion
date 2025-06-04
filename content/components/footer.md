@@ -1,8 +1,3 @@
----
-title: ""
-description: ""
----
-
 # Red Propulsion Team
 
 Dipartimento di Ingegneria Industriale

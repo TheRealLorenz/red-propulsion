@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "path";
 import matter from "gray-matter";
 
-export type MarkdownFile = {
+export type MarkdownPage = {
   content: string;
   metadata: Metadata;
 };
@@ -27,21 +27,41 @@ function checkMetadata(input: {
   }
 }
 
-export default function getMarkdown(fileRelativePath: string): MarkdownFile {
-  try {
-    const fileContent = fs.readFileSync(
-      path.join(process.cwd(), "content", fileRelativePath),
-      "utf-8",
-    );
+function readContent(relativePath: string): string {
+  const fileContent = fs.readFileSync(
+    path.join(process.cwd(), "content", relativePath),
+    "utf-8",
+  );
 
-    if (fileContent === "") {
-      throw `File not found`;
-    }
-
-    const { content, data } = matter(fileContent);
-    checkMetadata(data);
-    return { content, metadata: data };
-  } catch (e: unknown) {
-    throw `Error while parsing '${fileRelativePath}': ${e}`;
+  if (fileContent === "") {
+    throw `File not found`;
   }
+
+  return fileContent;
 }
+
+const Markdown = {
+  getPage: function (relativePath: string): MarkdownPage {
+    try {
+      const { content, data } = matter(
+        readContent(path.join("pages", relativePath)),
+      );
+
+      checkMetadata(data);
+
+      return { content, metadata: data };
+    } catch (e: unknown) {
+      throw `Error while parsing page '${relativePath}': ${e}`;
+    }
+  },
+
+  getComponent: function (relativePath: string): string {
+    try {
+      return readContent(path.join("components", relativePath));
+    } catch (e: unknown) {
+      throw `Error while parsing component '${relativePath}': ${e}`;
+    }
+  },
+};
+
+export default Markdown;

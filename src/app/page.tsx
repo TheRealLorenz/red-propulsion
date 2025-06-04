@@ -1,12 +1,12 @@
 import ReactMarkdown from "react-markdown";
-import getMarkdown from "@/markdown";
+import Markdown from "@/markdown";
 import Landing from "@/components/Landing";
 import sectionize from "remark-sectionize";
 import WithDivider from "@/components/WithDivider";
 import rehypeFigure from "@/lib/rehype-figure";
 
 export function generateMetadata() {
-  const data = getMarkdown("index.md");
+  const data = Markdown.getPage("index.md");
 
   return data.metadata;
 }
@@ -32,7 +32,7 @@ function Figure({ children }: { children?: React.ReactNode }) {
 }
 
 export default function Home() {
-  const data = getMarkdown("index.md");
+  const data = Markdown.getPage("index.md");
 
   return (
     <div>
