@@ -17,9 +17,7 @@ function Section({ children }: { children?: React.ReactNode }) {
     <div className="group even:bg-red-400 border-background even:border-red-400 border-t">
       <WithDivider className="fill-red-400 group-[:nth-child(even)]:fill-background group-[:nth-child(even)]:stroke-background group-[:last-child]:fill-none">
         <Bounded>
-          <section className="text-xl md:text-2xl [&>h2]:text-4xl [&>h2]:md:text-5xl [&>h2]:mb-4 [&>h2]:font-bold">
-            {children}
-          </section>
+          <section>{children}</section>
         </Bounded>
       </WithDivider>
     </div>
@@ -28,7 +26,7 @@ function Section({ children }: { children?: React.ReactNode }) {
 
 function Figure({ children }: { children?: React.ReactNode }) {
   return (
-    <figure className="mx-auto w-fit m-4 italic text-center text-base [&>figcaption]:mt-2">
+    <figure className="mx-auto w-fit my-8 italic text-center text-base [&>figcaption]:mt-2">
       {children}
     </figure>
   );
@@ -45,6 +43,14 @@ export default function Home() {
         rehypePlugins={[rehypeFigure]}
         components={{
           section: Section,
+          h2: ({ children }) => (
+            <h2 className="text-4xl md:text-5xl mb-4 font-bold underline">
+              {children}
+            </h2>
+          ),
+          p: ({ children }) => (
+            <p className="text-xl md:text-2xl mb-4">{children}</p>
+          ),
           figure: Figure,
         }}
       >
