@@ -1,5 +1,3 @@
-import Markdown from "@/markdown";
-import ReactMarkdown from "react-markdown";
 import WithDivider from "./WithDivider";
 
 type WithChildren = {
@@ -20,20 +18,23 @@ function Subtitle({ children }: WithChildren) {
   );
 }
 
-export default function Landing() {
-  const component = Markdown.getComponent("landing.md");
+type Props = {
+  children?: React.ReactNode;
+};
 
+export default function Landing({ children }: Props) {
   return (
     <WithDivider absolute className="fill-background-alt">
       <div className="h-dvh flex flex-col items-center justify-center w-content">
-        <ReactMarkdown
-          components={{
-            h1: LandingTitle,
-            p: Subtitle,
-          }}
-        >
-          {component}
-        </ReactMarkdown>
+        {/* <ReactMarkdown */}
+        {/*   components={{ */}
+        {/*     h1: LandingTitle, */}
+        {/*     p: Subtitle, */}
+        {/*   }} */}
+        {/* > */}
+        {/*   {component} */}
+        {/* </ReactMarkdown> */}
+        {children}
       </div>
     </WithDivider>
   );

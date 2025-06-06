@@ -3,6 +3,14 @@ title: Red propulsion
 description: empty
 ---
 
+:::landing
+# Red Propulsion
+
+Student Rocketry Team
+
+_University of Florence_
+:::
+
 ## Title
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi numquam quisquam minus impedit fugiat qui? Reprehenderit dolorem maiores corrupti iure nam id modi voluptatum, praesentium accusantium fuga dignissimos labore est a perspiciatis ex laudantium, consectetur cum. Possimus facilis quisquam eveniet facere dolorum non blanditiis nisi eaque dolores obcaecati aliquam molestiae atque architecto ut temporibus,

@@ -44,7 +44,7 @@ const Markdown = {
   getPage: function (relativePath: string): MarkdownPage {
     try {
       const { content, data } = matter(
-        readContent(path.join("pages", relativePath)),
+        readContent(path.join(relativePath, "page.md")),
       );
 
       checkMetadata(data);
@@ -55,9 +55,9 @@ const Markdown = {
     }
   },
 
-  getComponent: function (relativePath: string): string {
+  getLayout: function (relativePath: string): string {
     try {
-      return readContent(path.join("components", relativePath));
+      return readContent(path.join(relativePath, "layout.md"));
     } catch (e: unknown) {
       throw `Error while parsing component '${relativePath}': ${e}`;
     }
