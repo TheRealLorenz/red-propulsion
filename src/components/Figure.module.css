@@ -1,0 +1,11 @@
+.main {
+  margin-inline: auto;
+  width: fit-content;
+  margin-block: 4rem;
+  font-style: italic;
+  text-align: center;
+
+  & > figcaption {
+    margin-top: 1.125rem;
+  }
+}

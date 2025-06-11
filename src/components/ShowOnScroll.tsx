@@ -19,8 +19,8 @@ export default function ShowOnScroll({ children }: Props) {
     <div
       style={{
         opacity: showNavbar ? 1 : 0,
+        transition: "opacity .3s",
       }}
-      className="transition-opacity "
     >
       {children}
     </div>

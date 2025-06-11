@@ -1,0 +1,39 @@
+.main {
+  width: 100%;
+  background-color: var(--background-dark);
+  color: var(--background);
+  padding: 2.5rem;
+  text-align: center;
+
+  @media (width >= 48rem) {
+    text-align: left;
+    padding: 6rem;
+  }
+
+  a {
+    text-decoration: underline;
+    color: var(--background);
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    margin-top: 1rem;
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+
+    @media (width >= 48rem) {
+      justify-content: start;
+    }
+  }
+
+  ul img {
+    width: 50px;
+    display: inline;
+  }
+}
