@@ -1,3 +1,4 @@
+import { ArrowDown } from "lucide-react";
 import styles from "./Landing.module.css";
 
 type Props = {
@@ -28,6 +29,7 @@ export default function Landing({ children }: Props) {
     <div className={styles.landing}>
       <Stars />
       <div className={styles.textContainer}>{children}</div>
+      <ArrowDown className={styles.arrowDown} />
       <div className={styles.transition} />
     </div>
   );

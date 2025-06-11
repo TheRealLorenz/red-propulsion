@@ -25,6 +25,8 @@ em {
   --foreground-dim: hsl(240 5% 64.9%);
   --foreground-light: white;
 
+  --primary: hsl(0 72.2% 50.6%);
+
   --red: #dd4e49;
   --lightred: #fc6f5b;
   --orange: #fc9d3d;
