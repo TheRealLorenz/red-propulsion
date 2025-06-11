@@ -24,7 +24,6 @@
     "unist-util-remove": "^4.0.0"
   },
   "devDependencies": {
-    "@benjc/rehype-semantic-images": "^0.1.0",
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",

@@ -1,5 +1,5 @@
 import ReactMarkdown from "react-markdown";
-import Markdown from "@/markdown";
+import Markdown from "@/lib/markdown";
 import Landing from "@/components/Landing";
 import rehypeFigure from "@/lib/rehype-figure";
 import remarkDirective from "remark-directive";

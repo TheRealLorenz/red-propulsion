@@ -4,7 +4,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import ReactMarkdown from "react-markdown";
-import Markdown from "@/markdown";
+import Markdown from "@/lib/markdown";
 import remarkDirective from "remark-directive";
 import remarkParseDirective from "@/lib/remark-parse-directive";
 
