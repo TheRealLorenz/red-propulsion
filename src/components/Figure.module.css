@@ -4,6 +4,7 @@
   margin-block: 4rem;
   font-style: italic;
   text-align: center;
+  color: var(--foreground-light);
 
   & > figcaption {
     margin-top: 1.125rem;

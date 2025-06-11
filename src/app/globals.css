@@ -11,10 +11,19 @@ em {
 }
 
 :root {
-  --background-light: #ededed;
-  --foreground-light: #171717;
-  --background-dark: #0a0a0a;
-  --foreground-dark: #ededed;
+  --background-dark: #0a0a0f;
+  --background-light: #1f2937;
+  --background: #111827;
+
+  --background-gradient: linear-gradient(
+    135deg,
+    var(--background-dark) 0%,
+    var(--background) 50%,
+    var(--background-light) 100%
+  );
+
+  --foreground-dim: hsl(240 5% 64.9%);
+  --foreground-light: white;
 
   --red: #dd4e49;
   --lightred: #fc6f5b;
@@ -23,15 +32,8 @@ em {
   --peach: #f2b99a;
 }
 
-/* @media (prefers-color-scheme: dark) { */
-/*   :root { */
-/*     --background: #0a0a0a; */
-/*     --foreground: #ededed; */
-/*   } */
-/* } */
-
 body {
-  background: var(--background-light);
-  color: var(--foreground-light);
+  background: var(--background-gradient);
+  color: var(--foreground-dim);
   font-family: Arial, Helvetica, sans-serif;
 }

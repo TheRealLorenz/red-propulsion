@@ -1,18 +1,22 @@
 .main {
   width: 100%;
   background-color: var(--background-dark);
-  color: var(--foreground-dark);
-  padding: 2.5rem;
+  color: var(--foreground-light);
+  padding: 1.5rem;
   text-align: center;
+
+  & > * {
+    margin-block: 0.5rem;
+  }
 
   @media (width >= 48rem) {
     text-align: left;
-    padding: 6rem;
+    padding: 2rem;
   }
 
   a {
     text-decoration: underline;
-    color: var(--background);
+    color: inherit;
   }
 
   h1 {
