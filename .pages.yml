@@ -5,10 +5,9 @@ content:
     path: content/page.md
     fields:
       - { name: title, label: Title, type: string, required: true }
+      - { name: landing, component: landing }
       - { name: description, label: Description, type: string, options: { maxLength: 100 } }
       - { name: body, label: Body, type: rich-text}
-      - name: landing
-        component: landing
 components:
   landing:
     label: Landing Section
