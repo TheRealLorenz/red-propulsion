@@ -7,7 +7,11 @@ content:
       - { name: title, label: Title, type: string, required: true }
       - { name: description, label: Description, type: string, options: { maxLength: 100 } }
       - { name: landing, component: landing }
-      - { name: body, label: Body, type: rich-text}
+      - name: sections
+        label: Sections
+        list: true
+        component: section
+      - { name: body, label: Body, type: rich-text }
 components:
   landing:
     label: Landing Section
@@ -17,4 +21,13 @@ components:
         type: string
       - name: subtitle
         label: Subtitle
+        type: rich-text
+  section:
+    label: Section
+    fields:
+      - name: title
+        label: Section title
+        type: string
+      - name: body
+        label: Section content
         type: rich-text
