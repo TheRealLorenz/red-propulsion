@@ -2,11 +2,11 @@ content:
   - name: index
     label: Homepage
     type: file
-    path: content/page.md
+    path: content/index.json
     fields:
       - { name: title, label: Title, type: string, required: true }
-      - { name: landing, component: landing }
       - { name: description, label: Description, type: string, options: { maxLength: 100 } }
+      - { name: landing, component: landing }
       - { name: body, label: Body, type: rich-text}
 components:
   landing:
