@@ -5,5 +5,11 @@
     "title": "Red Propulsion",
     "subtitle": "<p style=\"text-align: center\">This is a cool subtitle</p><p style=\"text-align: center\"><em>This is another</em></p>"
   },
+  "sections": [
+    {
+      "title": "Example title 1",
+      "body": "Example content!!"
+    }
+  ],
   "body": "## Title 2\n\nParagraph interesiting!"
 }
