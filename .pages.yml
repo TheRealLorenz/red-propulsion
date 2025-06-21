@@ -1,0 +1,9 @@
+content:
+  - name: index
+    label: Homepage
+    type: file
+    path: content/page.md
+    fields:
+      - { name: title, label: Title, type: string, reduired: true }
+      - { name: description, label: Description, type: string, options: { maxLength: 100 } }
+      - { name: body, label: Body, type: rich-text}
