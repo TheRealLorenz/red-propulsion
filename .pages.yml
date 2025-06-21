@@ -7,3 +7,13 @@ content:
       - { name: title, label: Title, type: string, reduired: true }
       - { name: description, label: Description, type: string, options: { maxLength: 100 } }
       - { name: body, label: Body, type: rich-text}
+components:
+  landing:
+    label: Landing Section
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: subtitle
+        label: Subtitle
+        type: rich-text
