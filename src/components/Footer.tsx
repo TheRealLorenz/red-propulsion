@@ -14,7 +14,9 @@ export default function Footer({ title, body, social_links }: Props) {
       <RichText content={body} />
       <ul>
         {social_links.map((item) => (
-          <li key={item.name}>{item.name}</li>
+          <li key={item.name}>
+            <img src={item.icon} />
+          </li>
         ))}
       </ul>
     </div>

@@ -51,3 +51,6 @@ components:
       - name: link
         label: Link
         type: string
+      - name: icon
+        label: Link Icon
+        type: image
