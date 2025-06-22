@@ -23,6 +23,7 @@ content:
             label: Cards Section
             fields:
               - name: cards
+                label: Cards
                 component: card
                 list: true
   - name: footer
