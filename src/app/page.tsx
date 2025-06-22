@@ -10,13 +10,41 @@ export function generateMetadata() {
   };
 }
 
+const blockTypes = ["text_section"];
+
+type BlockContent = {
+  type: "text_section";
+  title: string;
+  body: string;
+};
+
+function Block({ content }: { content: BlockContent }) {
+  switch (content.type) {
+    case "text_section": {
+      return <Section {...content} />;
+    }
+    default: {
+      throw `Unhandled block type: ${content.type}`;
+    }
+  }
+}
+
+function validateBlockContent(
+  content: { type: string } & Record<string, unknown>,
+): asserts content is BlockContent {
+  if (blockTypes.indexOf(content.type) === -1) {
+    throw `Invalid block content ${content.type}`;
+  }
+}
+
 export default function Home() {
   return (
     <>
       <Landing {...Content.landing} />
-      {Content.sections.map((section) => (
-        <Section {...section} key={section.title} />
-      ))}
+      {Content.sections.map((content, i) => {
+        validateBlockContent(content);
+        return <Block content={content} key={i} />;
+      })}
     </>
   );
 }
