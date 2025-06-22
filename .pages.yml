@@ -13,7 +13,10 @@ content:
       - name: sections
         label: Sections
         list: true
-        component: section
+        blocks:
+          - name: text
+            label: Text Section
+            component: section
   - name: footer
     label: Footer
     type: file
