@@ -21,15 +21,27 @@
       "cards": [
         {
           "title": "Dipartimento numero cinque",
-          "body": "Qui facciamo cose cosanti cosate cosabiche"
+          "body": "Qui facciamo cose cosanti cosate cosabiche",
+          "button": {
+            "title": "Join now!",
+            "link": "https://redpropulsion.it"
+          }
         },
         {
           "title": "Settore 7",
-          "body": "Qui andiamo ad andare"
+          "body": "Qui andiamo ad andare",
+          "button": {
+            "title": "Join now!",
+            "link": "https://redpropulsion.it"
+          }
         },
         {
           "title": "Squadra speciale FF55",
-          "body": "Qui ci occupiamo del bronderone"
+          "body": "Qui ci occupiamo del bronderone",
+          "button": {
+            "title": "Join now!",
+            "link": "https://redpropulsion.it"
+          }
         }
       ]
     }
