@@ -3,7 +3,7 @@
   "description": "Test description",
   "landing": {
     "title": "Red Propulsion",
-    "subtitle": "<p style=\"text-align: center\">This is a cool subtitle</p><p style=\"text-align: center\"><em>This is another</em></p>"
+    "subtitle": "This is a cool subtitle\n\n_This is another_"
   },
   "sections": [
     {
