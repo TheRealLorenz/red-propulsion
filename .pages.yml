@@ -1,3 +1,6 @@
+media:
+  input: /public
+  output: /
 content:
   - name: index
     label: Homepage
