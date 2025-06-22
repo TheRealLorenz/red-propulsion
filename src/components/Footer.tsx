@@ -4,7 +4,7 @@ import RichText from "./RichText";
 type Props = {
   title: string;
   body: string;
-  social_links: { name: string; link: string }[];
+  social_links: { name: string; link: string; icon: string }[];
 };
 
 export default function Footer({ title, body, social_links }: Props) {
@@ -15,7 +15,7 @@ export default function Footer({ title, body, social_links }: Props) {
       <ul>
         {social_links.map((item) => (
           <li key={item.name}>
-            <img src={item.icon} />
+            <img src={item.icon} alt={item.name} />
           </li>
         ))}
       </ul>

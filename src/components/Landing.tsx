@@ -1,5 +1,6 @@
 import { ArrowDown } from "lucide-react";
 import styles from "./Landing.module.css";
+import RichText from "@/components//RichText";
 
 function Stars() {
   return (
@@ -29,8 +30,10 @@ export default function Landing({ title, subtitle }: Props) {
   return (
     <div className={styles.landing}>
       <Stars />
-      <h1>{title}</h1>
-      <div>{subtitle}</div>
+      <div className={styles.textContainer}>
+        <h1>{title}</h1>
+        <RichText content={subtitle} />
+      </div>
       <ArrowDown className={styles.arrowDown} />
       <div className={styles.transition} />
     </div>
