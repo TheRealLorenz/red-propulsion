@@ -13,9 +13,10 @@ content:
       - name: sections
         label: Sections
         type: block
+        blockKey: type
         list: true
         blocks:
-          - name: text
+          - name: text_section
             label: Text Section
             component: section
   - name: footer
