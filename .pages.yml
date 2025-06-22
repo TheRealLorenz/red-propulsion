@@ -19,6 +19,9 @@ content:
           - name: text_section
             label: Text Section
             component: section
+          - name: cards_section
+            label: Cards Section
+            component: cards_section
   - name: footer
     label: Footer
     type: file
@@ -58,3 +61,13 @@ components:
       - name: icon
         label: Link Icon
         type: image
+  cards_section:
+    label: Cards
+    list: true
+    fields:
+      - title: string
+        label: Title
+        type: string
+      - body: string
+        label: Body
+        type: rich-text
