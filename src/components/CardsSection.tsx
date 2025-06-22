@@ -1,13 +1,25 @@
-type CardProps = {
+import RichText from "./RichText";
+
+import styles from "./CardsSection.module.css";
+import Bounded from "./Bounded";
+
+export type CardProps = {
   title: string;
   body: string;
+  button: {
+    title: string;
+    link: string;
+  };
 };
 
-function Card({ title, body }: CardProps) {
+function Card({ title, body, button }: CardProps) {
   return (
-    <div>
+    <div className={styles.card}>
       <h3>{title}</h3>
-      <p>{body}</p>
+      <RichText content={body} />
+      <a href={button.link} className={styles.button}>
+        {button.title}
+      </a>
     </div>
   );
 }
@@ -18,10 +30,21 @@ type Props = {
 
 export default function CardsSection({ cards }: Props) {
   return (
-    <div>
-      {cards.map((card, i) => (
-        <Card {...card} key={i} />
-      ))}
-    </div>
+    <Bounded>
+      <div className={styles.carousel}>
+        <div className={styles.container}>
+          {cards.map((item, i) => (
+            <div
+              key={i}
+              style={{
+                scrollSnapAlign: "center",
+              }}
+            >
+              <Card {...item} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </Bounded>
   );
 }
