@@ -21,7 +21,8 @@ content:
             component: section
           - name: cards_section
             label: Cards Section
-            component: cards_section
+            component: card
+            list: true
   - name: footer
     label: Footer
     type: file
@@ -61,9 +62,8 @@ components:
       - name: icon
         label: Link Icon
         type: image
-  cards_section:
-    label: Cards
-    list: true
+  card:
+    label: Card
     fields:
       - title: string
         label: Title
