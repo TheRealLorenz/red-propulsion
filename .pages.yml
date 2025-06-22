@@ -12,6 +12,7 @@ content:
       - { name: landing, component: landing }
       - name: sections
         label: Sections
+        type: block
         list: true
         blocks:
           - name: text
