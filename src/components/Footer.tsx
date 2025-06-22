@@ -1,9 +1,16 @@
 import styles from "./Footer.module.css";
 
 type Props = {
-  children?: React.ReactNode;
+  title: string;
+  body: string;
+  social_links: { name: string; link: string }[];
 };
 
-export default function Footer({ children }: Props) {
-  return <div className={styles.main}>{children}</div>;
+export default function Footer({ title, body }: Props) {
+  return (
+    <div className={styles.main}>
+      <h1>{title}</h1>
+      <p>{body}</p>
+    </div>
+  );
 }

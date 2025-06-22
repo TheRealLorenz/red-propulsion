@@ -2,7 +2,7 @@ content:
   - name: index
     label: Homepage
     type: file
-    path: content/index.json
+    path: src/content/index.json
     fields:
       - { name: title, label: Title, type: string, required: true }
       - { name: description, label: Description, type: string, options: { maxLength: 100 } }
@@ -12,6 +12,14 @@ content:
         list: true
         component: section
       - { name: body, label: Body, type: rich-text }
+  - name: footer
+    label: Footer
+    type: file
+    path: src/content/footer.json
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: body, label: Body, type: rich-text }
+      - { name: social_links, label: Social Links, component: social_links, list: true }
 components:
   landing:
     label: Landing Section
@@ -31,3 +39,12 @@ components:
       - name: body
         label: Section content
         type: rich-text
+  social_links:
+    label: Social Link
+    fields:
+      - name: name
+        label: Name
+        type: string
+      - name: link
+        label: Link
+        type: string
