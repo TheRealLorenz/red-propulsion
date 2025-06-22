@@ -65,9 +65,9 @@ components:
   card:
     label: Card
     fields:
-      - title: string
+      - name: title
         label: Title
         type: string
-      - body: string
+      - name: body
         label: Body
         type: rich-text
