@@ -65,6 +65,15 @@ components:
       - name: icon
         label: Link Icon
         type: image
+  button:
+    label: Button
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: link
+        label: Link
+        type: string
   card:
     label: Card
     fields:
@@ -74,3 +83,6 @@ components:
       - name: body
         label: Body
         type: rich-text
+      - name: button
+        label: Button
+        component: button
