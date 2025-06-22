@@ -1,5 +1,5 @@
 media:
-  input: /public
+  input: public
   output: /
 content:
   - name: index
@@ -14,7 +14,6 @@ content:
         label: Sections
         list: true
         component: section
-      - { name: body, label: Body, type: rich-text }
   - name: footer
     label: Footer
     type: file
