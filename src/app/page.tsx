@@ -24,16 +24,13 @@ type BlockContent =
       cards: CardProps[];
     };
 
-function Block({ content }: { content: BlockContent }) {
+function Block({ content }: { content: BlockContent }): React.ReactNode {
   switch (content.type) {
     case "text_section": {
       return <Section {...content} />;
     }
     case "cards_section": {
       return <CardsSection cards={content.cards} />;
-    }
-    default: {
-      throw `Unhandled block type: ${content.type}`;
     }
   }
 }
